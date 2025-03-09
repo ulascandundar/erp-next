@@ -1,0 +1,30 @@
+{
+  "public": {
+    "title": "ERP System",
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "requiredField": "Required field.",
+    "passwordPattern": "Your password must contain at least one digit, at least one lowercase letter, at least one uppercase letter, should not contain spaces, and must be 8-32 characters in length.",
+    "success": "Success."
+  },
+  "auth": {
+    "loginSignTitle": "Login",
+    "loginSignTitleDesc": "Enter your email address and password to log in to your account",
+    "logout": "Logout",
+    "userInformation": "User Information"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "hello": "Hello"
+  },
+  "profile": {
+    "title": "Profile"
+  },
+  "product": {
+    "title": "Product"
+  },
+  "order": {
+    "title": "Order"
+  }
+}

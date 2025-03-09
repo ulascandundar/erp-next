@@ -1,0 +1,30 @@
+{
+  "public": {
+    "title": "ERP Sistemi",
+    "login": "Giriş Yap",
+    "email": "E-posta",
+    "password": "Şifre",
+    "requiredField": "Zorunlu alan.",
+    "passwordPattern": "Şifreniz en az bir rakam, en az bir küçük harf, en az bir büyük harf içermeli, boşluk içermemeli ve 8-32 karakter uzunluğunda olmalıdır.",
+    "success": "Başarılı."
+  },
+  "auth": {
+    "loginSignTitle": "Giriş Yap",
+    "loginSignTitleDesc": "Hesabınıza giriş yapmak için e-posta adresinizi ve şifrenizi girin",
+    "logout": "Çıkış Yap",
+    "userInformation": "Kullanıcı Bilgisi"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "hello": "Merhaba"
+  },
+  "profile": {
+    "title": "Profil"
+  },
+  "product": {
+    "title": "Ürünler"
+  },
+  "order": {
+    "title": "Sipariş"
+  }
+}
