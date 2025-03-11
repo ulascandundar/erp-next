@@ -22,11 +22,11 @@ const setLogout = async () => {
   return true;
 };
 
-const postUsersChangePassword = async (values, lang) => {};
+const postUsersChangePassword = async (values) => {};
 
-const postUsersForgotPassword = async (values, lang) => {};
+const postUsersForgotPassword = async (values) => {};
 
-const putForgotPasswordResetPassword = async (values, lang) => {};
+const putForgotPasswordResetPassword = async (values) => {};
 
 export {
   postLogin,

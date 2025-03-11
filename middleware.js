@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { hasPermission } from "@/components/roleBasedMenus";
 
 let locales = ["en", "tr"];
-let defaultLocale = "en";
+let defaultLocale = "tr";
 
 export async function middleware(request) {
   const pathname = request.nextUrl.pathname;

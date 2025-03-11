@@ -206,9 +206,6 @@ const replaceUndefinedWithNull = (obj) => {
     })
   );
 };
-const handleLocaleUpperCase = (value, lang) => {
-  return value.toLocaleUpperCase(lang);
-};
 
 export {
   getLocale,
@@ -230,5 +227,4 @@ export {
   formatMoney,
   formatDateSimpleFormat,
   replaceUndefinedWithNull,
-  handleLocaleUpperCase,
 };

@@ -12,7 +12,9 @@
     "loginSignTitle": "Giriş Yap",
     "loginSignTitleDesc": "Hesabınıza giriş yapmak için e-posta adresinizi ve şifrenizi girin",
     "logout": "Çıkış Yap",
-    "userInformation": "Kullanıcı Bilgisi"
+    "userInformation": "Kullanıcı Bilgisi",
+    "nameSurname": "Ad Soyad",
+    "companyName": "Şirket Adı"
   },
   "dashboard": {
     "title": "Dashboard",

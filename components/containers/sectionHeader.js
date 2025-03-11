@@ -118,9 +118,11 @@ export default function SectionHeaderComponent({ title, dict, lang }) {
                     </div>
                     <div className="text-left text-xs font-medium text-gray-700">
                       {`${
-                        dict.dashboard.emaaAgency?.length > 18
-                          ? dict.dashboard.emaaAgency.slice(0, 18) + "..."
-                          : dict.dashboard.emaaAgency
+                        user?.companyName
+                          ? user?.companyName?.length > 18
+                            ? user?.companyName?.slice(0, 18) + "..."
+                            : user?.companyName
+                          : ""
                       }`}
                     </div>
                   </div>

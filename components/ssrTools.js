@@ -4,10 +4,6 @@ import { cookies } from "next/headers";
 
 //  #region fetch işlemleri
 
-const getAcceptLanguage = (lang) => {
-  return `${lang}-${lang.toUpperCase()}`;
-};
-
 const getApiUrl = (endpoint) => {
   // Ortam değişkenlerini kontrol ederek API URL'sini belirle
   const baseUrl = process.env.API_URL;
@@ -16,15 +12,13 @@ const getApiUrl = (endpoint) => {
   return `${baseUrl}${endpoint}`;
 };
 
-const fetchData = async ({ url, method, lang, body = null, token = null }) => {
+const fetchData = async ({ url, method, lang, body = null }) => {
   const headers = {
     "Content-Type": "application/json",
-    "Accept-Language": getAcceptLanguage(lang),
+    "Accept-Language": getAcceptLanguageCode(lang),
+    Authorization: `Bearer ${await getToken()}`,
   };
 
-  if (token) {
-    headers.Authorization = `Bearer ${token}`;
-  }
 
   const fetchOptions = {
     cache: "no-store",
@@ -84,7 +78,7 @@ const validResponse = async (res, fetchUrl, values, type) => {
     } catch {}
     if (res?.status == 401) {
       try {
-        const cookieStore = cookies();
+        const cookieStore = await cookies();
         cookieStore.set("token", "");
         messages = `Sunucu Kaynaklı Hata: ${res?.status} - ${res?.statusText}`;
       } catch {}
@@ -110,4 +104,19 @@ const validResponse = async (res, fetchUrl, values, type) => {
 
 // #endregion response kodları
 
-export { fetchData, getToken, validResponse, getTokenValue };
+//  #region language işlemleri
+const getAcceptLanguageCode = (locale) => {
+  if (locale === "en") {
+    return "en-US";
+  }
+  return "tr-TR";
+};
+//  #endregion language işlemleri
+
+export {
+  fetchData,
+  getToken,
+  validResponse,
+  getTokenValue,
+  getAcceptLanguageCode,
+};

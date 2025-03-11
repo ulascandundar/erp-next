@@ -28,7 +28,7 @@ export default function DashboardPage({ dict, lang }) {
             </div>
             <div className="flex items-center gap-1 text-sm font-semibold leading-4 text-gray-800">
               <IconBuildingOffice className={"h-6 w-6"} />
-              <div>Company Name</div>
+              <div>{user?.companyName}</div>
             </div>
           </div>
           <div className="basis-full self-center md:basis-48">

@@ -12,7 +12,9 @@
     "loginSignTitle": "Login",
     "loginSignTitleDesc": "Enter your email address and password to log in to your account",
     "logout": "Logout",
-    "userInformation": "User Information"
+    "userInformation": "User Information",
+    "nameSurname": "Name Surname",
+    "companyName": "Company Name"
   },
   "dashboard": {
     "title": "Dashboard",
