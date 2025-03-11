@@ -12,23 +12,21 @@ export default function DashboardPage({ dict, lang }) {
 
   return (
     <div className="flex flex-wrap items-center gap-5">
-      {user?.name ? (
+      {user ? (
         <>
           <div className="ml-1 flex flex-1 flex-col justify-center">
             <div className="text-xl font-medium text-gray-900 md:text-3xl">
               {dict.dashboard.hello},{" "}
               <span className="inline-flex font-bold">
-                {user?.name && (
-                  <>
-                    {`${user?.name}`}
-                    <IconCheckBadge className={"h-4 w-4 text-green-500"} />
-                  </>
-                )}
+                <>
+                  {user?.name || dict.auth.nameSurname}
+                  <IconCheckBadge className={"h-4 w-4 text-green-500"} />
+                </>
               </span>
             </div>
             <div className="flex items-center gap-1 text-sm font-semibold leading-4 text-gray-800">
               <IconBuildingOffice className={"h-6 w-6"} />
-              <div>{user?.companyName}</div>
+              <div>{user?.companyName || dict.auth.companyName}</div>
             </div>
           </div>
           <div className="basis-full self-center md:basis-48">

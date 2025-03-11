@@ -83,7 +83,7 @@ export default function SectionHeaderComponent({ title, dict, lang }) {
             placement="bottom"
           >
             <div className="flex cursor-pointer items-center gap-3 pl-4">
-              {user?.name ? (
+              {user ? (
                 <>
                   <Badge dot color="green" offset={[-2, 26]}>
                     <Avatar
@@ -113,7 +113,7 @@ export default function SectionHeaderComponent({ title, dict, lang }) {
                           ? user?.name?.length > 18
                             ? user?.name?.slice(0, 18) + "..."
                             : user?.name
-                          : ""
+                          : dict.auth.nameSurname
                       }`}
                     </div>
                     <div className="text-left text-xs font-medium text-gray-700">
@@ -122,7 +122,7 @@ export default function SectionHeaderComponent({ title, dict, lang }) {
                           ? user?.companyName?.length > 18
                             ? user?.companyName?.slice(0, 18) + "..."
                             : user?.companyName
-                          : ""
+                          : dict.auth.companyName
                       }`}
                     </div>
                   </div>

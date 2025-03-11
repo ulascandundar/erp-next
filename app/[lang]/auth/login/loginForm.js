@@ -65,9 +65,9 @@ export default function LoginForm({
             )
           : null;
         const user = {
-          name: decodedToken?.name || dict.auth.nameSurname,
+          name: decodedToken?.name,
           email: decodedToken?.email,
-          companyName: decodedToken?.companyName || dict.auth.companyName,
+          companyName: decodedToken?.companyName,
         };
         localStorage.setItem("user", JSON.stringify(user));
         if (response) {
